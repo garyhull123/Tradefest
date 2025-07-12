@@ -5,6 +5,7 @@ body {
   background-size: cover;
   color: white;
   margin: 0;
+  padding: 0;
 }
 
 header, footer {
@@ -13,16 +14,21 @@ header, footer {
   text-align: center;
 }
 
+main {
+  margin-top: 100px;
+}
+
 .racetrack {
-  margin: 20px auto;
+  margin: 60px auto 0;
   max-width: 900px;
+  padding-top: 60px;
 }
 
 .lane {
   background: rgba(0,0,0,0.5);
   border: 2px solid white;
   border-radius: 15px;
-  margin: 10px 0;
+  margin: 20px 0;
   padding: 10px;
   position: relative;
   height: 80px;
@@ -39,19 +45,19 @@ header, footer {
 .label {
   position: absolute;
   top: 10px;
-  left: 100px;
+  left: 80px;
   font-size: 1.2em;
 }
 
 .controls {
   text-align: center;
-  margin: 20px;
+  margin: 40px 0;
 }
 
 .bookie {
   position: fixed;
   right: 20px;
-  top: 100px;
+  top: 160px;
   width: 200px;
   background: rgba(0,0,0,0.6);
   padding: 10px;
