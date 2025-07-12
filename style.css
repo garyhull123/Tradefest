@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
+  background-position: center;
   color: white;
   margin: 0;
   padding: 0;
@@ -15,50 +16,54 @@ header, footer {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .racetrack {
-  margin: 60px auto 0;
-  max-width: 900px;
-  padding-top: 60px;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 10px 10px 100px;
 }
 
 .lane {
   background: rgba(0,0,0,0.5);
   border: 2px solid white;
   border-radius: 15px;
-  margin: 20px 0;
-  padding: 10px;
+  margin: 10px 0;
+  padding: 5px;
   position: relative;
-  height: 80px;
+  height: 60px;
+  overflow: hidden;
 }
 
 .horse {
   position: absolute;
-  top: 10px;
+  top: 5px;
   left: 0;
-  height: 60px;
+  height: 50px;
   transition: left 0.4s ease;
 }
 
 .label {
   position: absolute;
-  top: 10px;
-  left: 80px;
-  font-size: 1.2em;
+  bottom: 5px;
+  left: 70px;
+  font-size: 1em;
+  background-color: rgba(0,0,0,0.6);
+  padding: 2px 6px;
+  border-radius: 8px;
 }
 
 .controls {
   text-align: center;
-  margin: 40px 0;
+  margin: 30px 0;
 }
 
 .bookie {
-  position: fixed;
-  right: 20px;
-  top: 160px;
-  width: 200px;
+  position: relative;
+  width: 90%;
+  max-width: 300px;
+  margin: 0 auto 40px;
   background: rgba(0,0,0,0.6);
   padding: 10px;
   border-radius: 10px;
@@ -78,4 +83,18 @@ main {
   list-style: none;
   padding: 0;
   font-size: 0.9em;
+}
+
+/* Mobile tweaks */
+@media screen and (max-width: 768px) {
+  .lane {
+    height: 50px;
+  }
+  .horse {
+    height: 40px;
+  }
+  .label {
+    font-size: 0.9em;
+    left: 60px;
+  }
 }
