@@ -7,21 +7,21 @@
 <body>
   <header>
     <h1>🐎 Limitless Tradefest</h1>
-    <p>Watch the race unfold as the team pushes for greatness!</p>
+    <p>Watch the avatars compete on the track!</p>
   </header>
   <main>
     <div class="racetrack">
-      <div class="lane" id="dan"><span class="horse">🐴</span> Dan</div>
-      <div class="lane" id="danny"><span class="horse">🐴</span> Danny</div>
-      <div class="lane" id="matt"><span class="horse">🐴</span> Matt</div>
-      <div class="lane" id="ryan"><span class="horse">🐴</span> Ryan</div>
+      <div class="lane" id="matt"><img class="horse" src="avatars/matt.png"><span class="label">Matt in the Hat</span></div>
+      <div class="lane" id="dan"><img class="horse" src="avatars/dan.png"><span class="label">Dan Dan the Kitchen Man</span></div>
+      <div class="lane" id="danny"><img class="horse" src="avatars/danny.png"><span class="label">Danny the Hammer</span></div>
+      <div class="lane" id="ryan"><img class="horse" src="avatars/ryan.png"><span class="label">Ryan "Sam" Maverick</span></div>
     </div>
     <section class="controls">
       <label>Move Horse:
         <select id="who">
+          <option value="matt">Matt</option>
           <option value="dan">Dan</option>
           <option value="danny">Danny</option>
-          <option value="matt">Matt</option>
           <option value="ryan">Ryan</option>
         </select>
       </label>
@@ -30,9 +30,19 @@
       </label>
       <button onclick="moveHorse()">Go!</button>
     </section>
+    <aside class="bookie">
+      <img src="bookie_stand.png" alt="Bookie Stand">
+      <div class="bookie-comment" id="bookie-comment">Place your bets!</div>
+      <ul class="odds" id="odds-list">
+        <li>Matt in the Hat – 4/1</li>
+        <li>Dan Dan the Kitchen Man – 4/1</li>
+        <li>Danny the Hammer – 4/1</li>
+        <li>Ryan "Sam" Maverick – 4/1</li>
+      </ul>
+    </aside>
   </main>
   <footer>
-    <p>Tradefest Hornchurch | Howdens 2025</p>
+    <p>Hornchurch Tradefest © 2025</p>
   </footer>
   <script src="script.js"></script>
 </body>
