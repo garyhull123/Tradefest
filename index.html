@@ -1,1 +1,26 @@
-<!DOCTYPE html><html><head><title>Tradefest</title><link rel='stylesheet' href='style.css'></head><body><canvas id='race'></canvas><script src='script.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tradefest Race</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="track-container">
+        <img src="festival-bg.jpg" class="background" alt="Festival Background">
+        <div class="horse-track">
+            <div class="horse" id="horse1"><img src="matt.png"><span>Matt in the Hat</span></div>
+            <div class="horse" id="horse2"><img src="dan.png"><span>Dan Dan the Kitchen Man</span></div>
+            <div class="horse" id="horse3"><img src="danny.png"><span>Danny the Hammer</span></div>
+            <div class="horse" id="horse4"><img src="ryan.png"><span>Sam Maverick</span></div>
+        </div>
+        <div class="inputs">
+            <div><label>Matt: </label><input type="number" id="input1" min="0" max="100"><button onclick="moveHorse(1)">Update</button></div>
+            <div><label>Dan: </label><input type="number" id="input2" min="0" max="100"><button onclick="moveHorse(2)">Update</button></div>
+            <div><label>Danny: </label><input type="number" id="input3" min="0" max="100"><button onclick="moveHorse(3)">Update</button></div>
+            <div><label>Ryan: </label><input type="number" id="input4" min="0" max="100"><button onclick="moveHorse(4)">Update</button></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
