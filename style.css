@@ -1,1 +1,52 @@
-body { font-family: Arial, sans-serif; background: #f9f9f9; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://i.imgur.com/y78vZhb.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.racetrack {
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.lane {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid white;
+  border-radius: 30px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1.5em;
+  position: relative;
+  text-align: left;
+}
+
+.horse {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  left: 0;
+  transition: left 0.4s ease;
+}
+
+.controls {
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  margin: 30px auto;
+  width: fit-content;
+  border-radius: 15px;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.6);
+}
