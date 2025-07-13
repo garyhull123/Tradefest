@@ -1,51 +1,78 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background-color: green;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('festival-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
 }
+
 #title {
-    text-align: center;
-    color: white;
-    font-size: 3em;
-    text-shadow: 2px 2px 2px black;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px black;
 }
-#background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-}
-.horse {
-    display: flex;
-    align-items: center;
-    margin: 1em;
-}
-.horse img {
-    width: 50px;
-    margin-right: 10px;
-}
-#bookie {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    color: white;
-    background: rgba(0,0,0,0.5);
-    padding: 10px;
-}
-#bookie img {
-    width: 100px;
-}
+
 #blimp {
-    position: absolute;
-    top: 20px;
-    left: 40%;
-    padding: 5px 15px;
-    background: white;
-    border-radius: 10px;
-    font-weight: bold;
-    box-shadow: 2px 2px 5px black;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px black;
+}
+
+#racers {
+  margin-top: 60px;
+  padding-left: 10px;
+}
+
+.lane {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.horse {
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.label {
+  margin-left: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
+
+#controls {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#bookie {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+}
+
+#bookie img {
+  width: 100px;
+}
+
+.banner {
+  background: black;
+  padding: 5px;
+  font-size: 0.9em;
 }

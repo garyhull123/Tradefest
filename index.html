@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Tradefest</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tradefest</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1 id="title">TRADEFEST</h1>
-    <img src="festival-bgj.jpg" id="background" alt="Festival Background">
-    <div class="horse" id="matt">
-        <img src="matt.png" alt="Matt Avatar">
-        <span>Matt in the Hat</span>
-    </div>
-    <div id="bookie">
-        <img src="bookie_stand.png" alt="Bookie Stand">
-        <p>Place your bets now!</p>
-    </div>
-    <div id="blimp">Howdens Hornchurch</div>
+  <div id="blimp">Howdens Hornchurch</div>
+  <h1 id="title">TRADEFEST</h1>
+  <div id="racers">
+    <div class="lane"><img src="matt.png" class="horse" id="matt" /><div class="label">Matt in the Hat</div></div>
+    <div class="lane"><img src="dan.png" class="horse" id="dan" /><div class="label">Dan Dan the Kitchen Man</div></div>
+    <div class="lane"><img src="danny.png" class="horse" id="danny" /><div class="label">Danny the Hammer</div></div>
+    <div class="lane"><img src="ryan.png" class="horse" id="ryan" /><div class="label">Sam Maverick</div></div>
+  </div>
+  <div id="controls">
+    <input id="mattVal" placeholder="Matt" /><button onclick="updateHorse('matt')">Update</button><br/>
+    <input id="danVal" placeholder="Dan" /><button onclick="updateHorse('dan')">Update</button><br/>
+    <input id="dannyVal" placeholder="Danny" /><button onclick="updateHorse('danny')">Update</button><br/>
+    <input id="ryanVal" placeholder="Ryan" /><button onclick="updateHorse('ryan')">Update</button>
+  </div>
+  <div id="bookie"><img src="bookie_stand.png" alt="Bookie Stand"/><div class="banner">Place your bets now!</div></div>
+  <script src="script.js"></script>
 </body>
 </html>

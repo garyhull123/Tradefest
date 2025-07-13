@@ -1,7 +1,5 @@
-
-function moveHorse(name) {
-  let input = document.getElementById(name + "Input").value;
-  let lane = document.getElementById(name + "-lane").querySelector("img");
-  let distance = parseInt(input || "0") * 10;
-  lane.style.transform = `translateX(${distance}px)`;
+function updateHorse(name) {
+  const inputVal = document.getElementById(name + "Val").value;
+  const horse = document.getElementById(name);
+  horse.style.transform = "translateX(" + inputVal + "px)";
 }
