@@ -1,33 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tradefest Race</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Tradefest</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="blimp">Howdens Hornchurch</div>
-  <h1 id="title">TRADEFEST</h1>
-  <div id="race-track">
-    <div class="lane" id="matt-lane"><img src="matt.png" class="horse"/><p>Matt in the Hat</p></div>
-    <div class="lane" id="dan-lane"><img src="dan.png" class="horse"/><p>Dan Dan the Kitchen Man</p></div>
-    <div class="lane" id="danny-lane"><img src="danny.png" class="horse"/><p>Danny the Hammer</p></div>
-    <div class="lane" id="ryan-lane"><img src="ryan.png" class="horse"/><p>Sam Maverick</p></div>
-  </div>
-  <div id="controls">
-    <label>Matt:<input id="mattInput" type="number"/><button onclick="moveHorse('matt')">Update</button></label>
-    <label>Dan:<input id="danInput" type="number"/><button onclick="moveHorse('dan')">Update</button></label>
-    <label>Danny:<input id="dannyInput" type="number"/><button onclick="moveHorse('danny')">Update</button></label>
-    <label>Ryan:<input id="ryanInput" type="number"/><button onclick="moveHorse('ryan')">Update</button></label>
-  </div>
-  <div id="bookie-stand">
-    <img src="bookie_stand.png" alt="Bookie Stand"/>
-    <div id="bookie-comment">Place your bets now!</div>
-  </div>
-  <img id="festival-bg" src="festival-bgj.jpg" />
-  <img id="howdens-flag" src="howdens-flag.png" />
-  <script src="script.js"></script>
+    <h1 id="title">TRADEFEST</h1>
+    <img src="festival-bgj.jpg" id="background" alt="Festival Background">
+    <div class="horse" id="matt">
+        <img src="matt.png" alt="Matt Avatar">
+        <span>Matt in the Hat</span>
+    </div>
+    <div id="bookie">
+        <img src="bookie_stand.png" alt="Bookie Stand">
+        <p>Place your bets now!</p>
+    </div>
+    <div id="blimp">Howdens Hornchurch</div>
 </body>
 </html>
