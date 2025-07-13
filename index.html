@@ -1,39 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tradefest Race</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="background"></div>
-  <div class="blimp">Howdens Hornchurch</div>
-  <div class="stage-banner">TRADEFEST</div>
-  <img src="howdens-flag.png" class="howdens-flag" alt="Howdens Flag" />
-  <div class="bookie-stand">
-    <img src="bookie.png" alt="Bookie" />
-    <div id="bookie-text">Place your bets now!</div>
+  <div id="blimp">Howdens Hornchurch</div>
+  <h1 id="title">TRADEFEST</h1>
+  <div id="race-track">
+    <div class="lane" id="matt-lane"><img src="matt.png" class="horse"/><p>Matt in the Hat</p></div>
+    <div class="lane" id="dan-lane"><img src="dan.png" class="horse"/><p>Dan Dan the Kitchen Man</p></div>
+    <div class="lane" id="danny-lane"><img src="danny.png" class="horse"/><p>Danny the Hammer</p></div>
+    <div class="lane" id="ryan-lane"><img src="ryan.png" class="horse"/><p>Sam Maverick</p></div>
   </div>
-  <div class="track">
-    <div class="horse" id="horse1">
-      <img src="matt.png" class="avatar" /><span>Matt in the Hat</span>
-    </div>
-    <div class="horse" id="horse2">
-      <img src="dan.png" class="avatar" /><span>Dan Dan the Kitchen Man</span>
-    </div>
-    <div class="horse" id="horse3">
-      <img src="danny.png" class="avatar" /><span>Danny the Hammer</span>
-    </div>
-    <div class="horse" id="horse4">
-      <img src="ryan.png" class="avatar" /><span>Sam Maverick</span>
-    </div>
+  <div id="controls">
+    <label>Matt:<input id="mattInput" type="number"/><button onclick="moveHorse('matt')">Update</button></label>
+    <label>Dan:<input id="danInput" type="number"/><button onclick="moveHorse('dan')">Update</button></label>
+    <label>Danny:<input id="dannyInput" type="number"/><button onclick="moveHorse('danny')">Update</button></label>
+    <label>Ryan:<input id="ryanInput" type="number"/><button onclick="moveHorse('ryan')">Update</button></label>
   </div>
-  <div class="controls">
-    <div><label>Matt:</label><input id="input1" type="number" min="0" max="100"><button onclick="moveHorse(1)">Update</button></div>
-    <div><label>Dan:</label><input id="input2" type="number" min="0" max="100"><button onclick="moveHorse(2)">Update</button></div>
-    <div><label>Danny:</label><input id="input3" type="number" min="0" max="100"><button onclick="moveHorse(3)">Update</button></div>
-    <div><label>Ryan:</label><input id="input4" type="number" min="0" max="100"><button onclick="moveHorse(4)">Update</button></div>
+  <div id="bookie-stand">
+    <img src="bookie_stand.png" alt="Bookie Stand"/>
+    <div id="bookie-comment">Place your bets now!</div>
   </div>
+  <img id="festival-bg" src="festival-bgj.jpg" />
+  <img id="howdens-flag" src="howdens-flag.png" />
   <script src="script.js"></script>
 </body>
 </html>
