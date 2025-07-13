@@ -1,27 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tradefest</title>
+  <title>Limitless Tradefest</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="blimp">Howdens Hornchurch</div>
-  <h1 id="title">TRADEFEST</h1>
-  <div id="racers">
-    <div class="lane"><img src="matt.png" class="horse" id="matt" /><div class="label">Matt in the Hat</div></div>
-    <div class="lane"><img src="dan.png" class="horse" id="dan" /><div class="label">Dan Dan the Kitchen Man</div></div>
-    <div class="lane"><img src="danny.png" class="horse" id="danny" /><div class="label">Danny the Hammer</div></div>
-    <div class="lane"><img src="ryan.png" class="horse" id="ryan" /><div class="label">Sam Maverick</div></div>
+  <h1 id="title">LIMITLESS TRADEFEST</h1>
+  <div id="racetrack">
+    <div class="lane" id="lane-matt">
+      <img src="assets/matt.png" class="horse" id="matt"/>
+      <div class="label">Matt in the Hat</div>
+    </div>
+    <div class="lane" id="lane-dan">
+      <img src="assets/dan.png" class="horse" id="dan"/>
+      <div class="label">Dan Dan the Kitchen Man</div>
+    </div>
+    <div class="lane" id="lane-danny">
+      <img src="assets/danny.png" class="horse" id="danny"/>
+      <div class="label">Danny the Hammer</div>
+    </div>
+    <div class="lane" id="lane-ryan">
+      <img src="assets/ryan.png" class="horse" id="ryan"/>
+      <div class="label">Ryan "Sam" Maverick</div>
+    </div>
   </div>
-  <div id="controls">
-    <input id="mattVal" placeholder="Matt" /><button onclick="updateHorse('matt')">Update</button><br/>
-    <input id="danVal" placeholder="Dan" /><button onclick="updateHorse('dan')">Update</button><br/>
-    <input id="dannyVal" placeholder="Danny" /><button onclick="updateHorse('danny')">Update</button><br/>
-    <input id="ryanVal" placeholder="Ryan" /><button onclick="updateHorse('ryan')">Update</button>
+  <div id="bookie">
+    <img src="assets/bookie_stand.png" alt="Bookie Stand"/>
+    <div id="odds">Odds: Matt 5/1 | Dan 6/1 | Danny 4/1 | Ryan 7/1</div>
+    <div id="one-liner">“Danny’s hammering the lead!”</div>
   </div>
-  <div id="bookie"><img src="bookie_stand.png" alt="Bookie Stand"/><div class="banner">Place your bets now!</div></div>
   <script src="script.js"></script>
 </body>
 </html>

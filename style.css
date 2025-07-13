@@ -1,24 +1,23 @@
+
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-image: url('festival-bg.jpg');
+  background: url('assets/festival-bg.jpg') no-repeat center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   color: white;
 }
 
 #title {
   text-align: center;
-  margin-top: 20px;
+  margin: 20px 0;
   font-size: 3em;
-  text-shadow: 2px 2px 4px black;
+  text-shadow: 2px 2px 4px #000;
 }
 
 #blimp {
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   background: white;
@@ -26,53 +25,57 @@ body {
   padding: 5px 15px;
   border-radius: 10px;
   font-weight: bold;
-  box-shadow: 2px 2px 5px black;
 }
 
-#racers {
-  margin-top: 60px;
-  padding-left: 10px;
+#racetrack {
+  margin-top: 100px;
+  padding-left: 20px;
 }
 
 .lane {
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 .horse {
   height: 60px;
-  transition: transform 0.3s ease;
+  animation: gallop 1s infinite;
+}
+
+@keyframes gallop {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
 }
 
 .label {
-  margin-left: 10px;
-  font-weight: bold;
+  margin-left: 15px;
+  font-size: 1.2em;
   text-shadow: 1px 1px 2px black;
-}
-
-#controls {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  border-radius: 8px;
 }
 
 #bookie {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  text-align: center;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+  background-color: rgba(0,0,0,0.6);
+  padding: 10px;
+  border-radius: 8px;
 }
 
 #bookie img {
   width: 100px;
 }
 
-.banner {
-  background: black;
-  padding: 5px;
+#odds {
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+#one-liner {
+  font-style: italic;
+  margin-top: 5px;
   font-size: 0.9em;
 }
