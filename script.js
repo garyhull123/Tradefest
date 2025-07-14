@@ -1,1 +1,1 @@
-// JS to fetch Google Sheet data and animate horses
+// Final JS script placeholder
