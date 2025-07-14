@@ -47,18 +47,17 @@ body {
   object-position: center;
   z-index: 0;
 }
-
 .lane {
   position: relative;
   flex: 1;
   display: flex;
   align-items: center;
 }
-
 .horse {
   position: absolute;
-  bottom: 20px;
   height: 90px;
+  bottom: 0;
+  transform: translateX(10vw); /* start point */
   transition: transform 0.6s ease-out;
 }
 
