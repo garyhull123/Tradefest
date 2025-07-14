@@ -19,7 +19,7 @@ function updateHorsePositions(data) {
       if (horse) {
         const maxPoints = 1000;
         const cappedPoints = Math.min(points, maxPoints);
-        const startOffsetVW = 10; // Horse start at 10vw
+        const startOffsetVW = 5; // Horse start at 10vw
         const trackLengthVW = 80; // Move within 80vw total
 
         const positionVW = startOffsetVW + (cappedPoints / maxPoints) * trackLengthVW;
