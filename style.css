@@ -56,9 +56,11 @@ body {
   padding-left: 10vw; /* align horse visually with left side of track */
 }
 .horse {
+  position: absolute;
+  bottom: 0;
   height: 90px;
-  transition: transform 0.6s ease-out;
-  transform: translateX(10vw); /* Default position if script fails */
+  left: 0; /* Ensure it starts at left */
+  transition: left 0.6s ease-out;
 }
 
 @keyframes gallop {
