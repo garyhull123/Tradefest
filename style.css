@@ -31,6 +31,7 @@ body {
   position: relative;
   width: 100vw;
   overflow-x: hidden;
+  margin-top: 50vh; /* Push track into lower half */
 }
 
 .background {
@@ -46,13 +47,17 @@ body {
 
 .lane {
   position: relative;
-  overflow: hidden;
+  height: 25vh; /* fixed vertical space per horse */
+  display: flex;
+  align-items: flex-end; /* ensures horse sits at bottom */
+  padding-left: 20px;
 }
 
 .horse {
   height: 100px;
   max-width: 100px;
   object-fit: contain;
+  transition: transform 0.5s ease-out;
 }
 
 @keyframes gallop {
