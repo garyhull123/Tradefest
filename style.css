@@ -1,75 +1,26 @@
-
-body {
-  font-family: Arial, sans-serif;
-  background: url('assets/images/festival-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  margin: 0;
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
-
-header, footer {
-  background-color: rgba(0,0,0,0.6);
-  padding: 20px;
-  text-align: center;
+.background {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
 }
-
-.racetrack {
-  margin: 20px auto;
-  max-width: 900px;
+.track .lane {
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
 }
-
-.lane {
-  background: rgba(0,0,0,0.5);
-  border: 2px solid white;
-  border-radius: 15px;
-  margin: 10px 0;
-  padding: 10px;
-  position: relative;
-  height: 80px;
-}
-
 .horse {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  height: 60px;
-  transition: left 0.4s ease;
+    height: 100px;
+    animation: gallop 1s steps(4) infinite;
 }
-
-.label {
-  position: absolute;
-  top: 10px;
-  left: 100px;
-  font-size: 1.2em;
-}
-
-.controls {
-  text-align: center;
-  margin: 20px;
-}
-
-.bookie {
-  position: fixed;
-  right: 20px;
-  top: 100px;
-  width: 200px;
-  background: rgba(0,0,0,0.6);
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.bookie img {
-  width: 100%;
-}
-
-.bookie-comment {
-  margin-top: 10px;
-  font-style: italic;
-  font-size: 0.9em;
-}
-
-.odds {
-  list-style: none;
-  padding: 0;
-  font-size: 0.9em;
+@keyframes gallop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100vw); }
 }
