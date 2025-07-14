@@ -29,9 +29,8 @@ body {
 }
 .track {
   position: relative;
-  height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .background {
@@ -47,16 +46,13 @@ body {
 
 .lane {
   position: relative;
-  z-index: 1;
-  height: 25vh;
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
+  overflow: hidden;
 }
 
 .horse {
   height: 100px;
-  transition: transform 1s ease-in-out;
+  max-width: 100px;
+  object-fit: contain;
 }
 
 @keyframes gallop {
