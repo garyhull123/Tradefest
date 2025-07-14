@@ -10,22 +10,27 @@ async function fetchSheetData() {
   });
   return data;
 }
+
 function updateHorsePositions(data) {
+  const maxPoints = 1000; // this is the furthest a horse can travel (mapped to 100vw)
+
   data.forEach(({ name, points }) => {
     const lane = document.getElementById(name.toLowerCase());
     if (lane) {
       const horse = lane.querySelector('.horse');
       if (horse) {
-        const position = Math.min(points / 10, 100); // 1000 points = 100vw
+        const cappedPoints = Math.min(points, maxPoints);
+        const position = (cappedPoints / maxPoints) * 100; // scale to vw
         horse.style.transform = `translateX(${position}vw)`;
       }
     }
   });
 }
+
 async function updateLoop() {
   const data = await fetchSheetData();
   updateHorsePositions(data);
 }
 
 updateLoop(); // run once immediately
-setInterval(updateLoop, 15000);
+setInterval(updateLoop, 15000); // run every 15 seconds
