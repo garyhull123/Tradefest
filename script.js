@@ -11,19 +11,15 @@ async function fetchSheetData() {
   return data;
 }
 
-const MAX_POINTS = 1000;
-const MAX_LEFT = 90; // usable width in vw
-const START_OFFSET = 8; // horses begin at 8vw
-
 function updateHorsePositions(data) {
   data.forEach(({ name, points }) => {
     const lane = document.getElementById(name.toLowerCase());
     if (lane) {
       const horse = lane.querySelector('.horse');
       if (horse) {
-        const percentage = Math.min(points / MAX_POINTS, 1);
-        const positionVW = START_OFFSET + percentage * (MAX_LEFT - START_OFFSET);
-        horse.style.left = `${positionVW}vw`;
+        const cappedPoints = Math.min(points, 1000);
+        const position = 10 + (cappedPoints / 1000) * 85; // Start at 10vw, max at 95vw
+        horse.style.transform = `translateX(${position}vw)`;
       }
     }
   });
@@ -35,4 +31,4 @@ async function updateLoop() {
 }
 
 updateLoop(); // run once immediately
-setInterval(updateLoop, 15000); // run every 15 seconds
+setInterval(updateLoop, 15000);
