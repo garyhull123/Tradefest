@@ -22,7 +22,7 @@ function updateHorsePositions(data) {
         const maxVW = 86;  // Finish line
 
         const progress = Math.min(points / maxPoints, 1); // Clamp between 0 and 1
-        const positionVW = minVW + (maxVW - minVW) * progress;
+        console.log(`${name}: ${points} points = ${positionVW}vw`);
 
         horse.style.left = `${positionVW}vw`; // ✅ No need for calc or extra offset
       }
