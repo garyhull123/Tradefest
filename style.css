@@ -1,34 +1,32 @@
-
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('assets/images/festival-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
 }
 
 header {
-    text-align: center;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 #main-title {
-    font-size: 2rem;
-    margin: 0.5rem 0;
-    text-shadow: 2px 2px #ccc;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px #ccc;
+  color: white;
 }
 
 .badge {
-    display: inline-block;
-    padding: 0.3rem 0.6rem;
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.background {
-    width: 100%;
-    height: auto;
-    display: block;
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
