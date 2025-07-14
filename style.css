@@ -52,14 +52,14 @@ body {
   position: relative;
   flex: 1;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .horse {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   height: 90px;
-  transition: left 0.6s ease-out;
+  transition: transform 0.6s ease-out;
 }
 
 @keyframes gallop {
