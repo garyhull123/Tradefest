@@ -4,13 +4,12 @@ body {
   font-family: Arial, sans-serif;
   background-image: url('assets/images/festival-bg.jpg');
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
+  background-position: center top;
+  background-size: cover;
   background-attachment: fixed;
   height: 100vh;
   overflow: hidden;
 }
-
 #main-title {
   font-size: 2rem;
   margin: 0.5rem 0;
