@@ -27,17 +27,41 @@ body {
   font-weight: bold;
   margin-bottom: 1rem;
 }
-.track .lane {
-    height: 25vh;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
+.track {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  object-fit: contain;
+  object-position: center;
+  z-index: 0;
+}
+
+.lane {
+  position: relative;
+  z-index: 1;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
 .horse {
-    height: 100px;
-    animation: gallop 1s steps(4) infinite;
+  height: 100px;
+  animation: gallop 1s steps(4) infinite;
 }
+
 @keyframes gallop {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(100vw); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100vw); }
 }
+
+
