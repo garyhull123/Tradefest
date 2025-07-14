@@ -56,7 +56,7 @@ body {
 
 .horse {
   height: 100px;
-  animation: gallop 1s steps(4) infinite;
+  transition: transform 1s ease-in-out;
 }
 
 @keyframes gallop {
