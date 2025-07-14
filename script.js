@@ -1,1 +1,1 @@
-// Final JS script placeholder
+// Placeholder for script.js
