@@ -12,7 +12,8 @@ async function fetchSheetData() {
 }
 
 const MAX_POINTS = 1000;
-const MAX_LEFT = 90; // in vw
+const MAX_LEFT = 90; // usable width in vw
+const START_OFFSET = 8; // horses begin at 8vw
 
 function updateHorsePositions(data) {
   data.forEach(({ name, points }) => {
@@ -21,7 +22,7 @@ function updateHorsePositions(data) {
       const horse = lane.querySelector('.horse');
       if (horse) {
         const percentage = Math.min(points / MAX_POINTS, 1);
-        const positionVW = percentage * MAX_LEFT;
+        const positionVW = START_OFFSET + percentage * (MAX_LEFT - START_OFFSET);
         horse.style.left = `${positionVW}vw`;
       }
     }
