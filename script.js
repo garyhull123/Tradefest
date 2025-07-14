@@ -18,12 +18,13 @@ function updateHorsePositions(data) {
       const horse = lane.querySelector('.horse');
       if (horse) {
         const maxPoints = 1000;
-        const cappedPoints = Math.min(points, maxPoints);
-        const startOffsetVW = 5; // Horse start at 10vw
-        const trackLengthVW = 80; // Move within 80vw total
+        const minVW = 14;  // Start line
+        const maxVW = 86;  // Finish line
 
-        const positionVW = startOffsetVW + (cappedPoints / maxPoints) * trackLengthVW;
-        horse.style.left = `calc(${positionVW}vw + 14vw)`; // 14vw = offset from far-left
+        const progress = Math.min(points / maxPoints, 1); // Clamp between 0 and 1
+        const positionVW = minVW + (maxVW - minVW) * progress;
+
+        horse.style.left = `${positionVW}vw`; // ✅ No need for calc or extra offset
       }
     }
   });
