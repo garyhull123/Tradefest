@@ -52,13 +52,13 @@ body {
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  padding-left: 10vw; /* align horse visually with left side of track */
 }
 .horse {
-  position: absolute;
   height: 90px;
-  bottom: 0;
-  transform: translateX(10vw); /* start point */
   transition: transform 0.6s ease-out;
+  transform: translateX(10vw); /* Default position if script fails */
 }
 
 @keyframes gallop {
