@@ -26,13 +26,13 @@ function updateHorsePositions(data) {
       const horse = lane.querySelector('.horse');
       if (horse) {
         const maxPoints = 1000;
-        const minVW = 14;  // Start line
-        const maxVW = 86;  // Finish line
+        const minVW = 14; // Start line
+        const maxVW = 86; // Finish line
 
-        const progress = Math.min(points / maxPoints, 1); // Clamp between 0 and 1
-        console.log(`${name}: ${points} points = ${positionVW}vw`);
+        const progress = Math.min(points / maxPoints, 1);
+        const positionVW = minVW + (maxVW - minVW) * progress;
 
-        horse.style.left = `${positionVW}vw`; // ✅ No need for calc or extra offset
+        horse.style.left = `${positionVW}vw`; // NO need to add 14vw again here
       }
     }
   });
