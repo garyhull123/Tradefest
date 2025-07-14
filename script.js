@@ -1,14 +1,22 @@
 const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT8FEi4MbzxmOEoM5gRXWzTQG5MAndLenVyXvYPrbu9He98I4VK0zpW57pQuA8OHWkuztR3dEVU8OvB/pub?output=csv";
 
 async function fetchSheetData() {
-  const response = await fetch(SHEET_URL);
-  const text = await response.text();
-  const rows = text.trim().split("\n").slice(1); // skip header
-  const data = rows.map(row => {
-    const cols = row.split(",");
-    return { name: cols[0], points: parseInt(cols[1]) || 0 };
-  });
-  return data;
+  try {
+    const response = await fetch(SHEET_URL);
+    const text = await response.text();
+    const rows = text.trim().split("\n").slice(1);
+    const data = rows.map(row => {
+      const cols = row.split(",");
+      return {
+        name: cols[0].trim(),
+        points: parseInt(cols[13]) || 0  // ← 14th column = "Points"
+      };
+    });
+    return data;
+  } catch (err) {
+    console.error("Error fetching sheet data:", err);
+    return [];
+  }
 }
 
 function updateHorsePositions(data) {
