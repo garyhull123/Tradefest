@@ -59,7 +59,7 @@ body {
   position: absolute;
   bottom: 0;
   height: 90px;
-  left: 0; /* Ensure it starts at left */
+  left: 5vw; /* Default start position */
   transition: left 0.6s ease-out;
 }
 
