@@ -23,7 +23,7 @@ function updateHorsePositions(data) {
         const trackLengthVW = 80; // Move within 80vw total
 
         const positionVW = startOffsetVW + (cappedPoints / maxPoints) * trackLengthVW;
-        horse.style.transform = `translateX(${positionVW}vw)`;
+        horse.style.left = `${positionVW}vw`;
       }
     }
   });
