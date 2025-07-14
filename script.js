@@ -16,7 +16,7 @@ function updateHorsePositions(data) {
     if (lane) {
       const horse = lane.querySelector('.horse');
       if (horse) {
-        const position = Math.min(points, 100); // cap at 100vw
+        const position = Math.min(points / 10, 100); // 1000 points = 100vw
         horse.style.transform = `translateX(${position}vw)`;
       }
     }
