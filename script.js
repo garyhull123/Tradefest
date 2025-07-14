@@ -4,12 +4,12 @@ async function fetchSheetData() {
   try {
     const response = await fetch(SHEET_URL);
     const text = await response.text();
-    const rows = text.trim().split("\n").slice(1);
+    const rows = text.trim().split("\n").slice(1); // skip header
     const data = rows.map(row => {
       const cols = row.split(",");
       return {
-        name: cols[0].trim(),
-        points: parseInt(cols[13]) || 0  // ← 14th column = "Points"
+        name: cols[0].trim(),       // Column A: Name
+        points: parseInt(cols[12]) || 0  // Column M: TotalPoints (index 12)
       };
     });
     return data;
