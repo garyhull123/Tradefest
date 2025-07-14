@@ -2,12 +2,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url('assets/images/festival-bg.jpg');
-  background-repeat: no-repeat;         /* Stop repeats */
-  background-position: center center;   /* Center image */
-  background-size: contain;             /* Fit entire image */
-  background-color: #000;               /* Fill any gaps with black (or your preferred color) */
-  background-attachment: fixed;
+  background: url('assets/images/festival-bg.jpg') no-repeat center center fixed;
+  background-size: auto 100%;
+  background-color: #000; /* or a matching blue if you'd prefer */
   height: 100vh;
   overflow: hidden;
 }
