@@ -80,8 +80,8 @@ body {
 }
 .bookie-stand {
   position: absolute;
-  bottom: 12vh; /* Just above the fence */
-  right: 2vw;
+  bottom: 15vh; /* Just above the fence */
+  right: 1vw;
   width: 15vw;
   z-index: 10;
 }
