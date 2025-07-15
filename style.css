@@ -58,9 +58,12 @@ body {
 .horse {
   position: absolute;
   bottom: 0;
-  height: 150px;
-  left: 14vw; /* Default start position */
+  height: 150px; /* Maintain fixed height */
+  left: 14vw;
   transition: left 0.6s ease-out;
+
+  animation: gallopBounce 0.4s infinite;
+  object-fit: contain;
 }
 @keyframes gallopBounce {
   0%, 100% {
@@ -71,9 +74,6 @@ body {
   }
 }
 
-.horse img {
-  animation: gallopBounce 0.4s infinite;
-}
 
 
 
