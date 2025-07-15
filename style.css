@@ -78,7 +78,13 @@ body {
     transform: translateY(-8px) rotate(-1deg);
   }
 }
-
+.bookie-stand {
+  position: absolute;
+  bottom: 12vh; /* Just above the fence */
+  right: 2vw;
+  width: 15vw;
+  z-index: 10;
+}
 
 
 
